@@ -27,7 +27,7 @@ for item in allFiles:
             pass
 
         dirPath = os.getcwd()
-        shutil.move(dirPath + "\\" + item, dirPath + "\\" + fileExtension + "\\" + item)
+        shutil.move(os.path.join(dirPath, item), os.path.join(dirPath, fileExtension, item))
     else:
         pass
 
@@ -44,4 +44,4 @@ else:
     pass
 
 dirPath = os.getcwd()
-shutil.move(dirPath+"\\"+"FileSorter.py", dirPath+"\\"+fileExtension+"\\"+"FileSorter.py")
+shutil.move(os.path.join(dirPath, "FileSorter.py"), os.path.join(dirPath, fileExtension, "FileSorter.py"))
